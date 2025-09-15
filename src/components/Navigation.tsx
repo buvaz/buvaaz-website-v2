@@ -8,17 +8,18 @@ export default function Navigation() {
       data-easing="ease"
       data-easing2="ease"
       role="banner"
-      className="navbar03_component"
+      className="navbar03_component w-nav"
     >
       <div className="navbar03_container">
         <a href="#" className="navbar03_logo-link w-nav-brand">
           <div className="uui-styleguide_logo">
             <img
-              src="/images/buvaaz_logo_02.png"
+              src="images/buvaaz_logo_02.png"
               loading="lazy"
               width="124"
               height="Auto"
               alt=""
+              srcSet="images/buvaaz_logo_02-p-500.png 500w, images/buvaaz_logo_02-p-800.png 800w, images/buvaaz_logo_02-p-1080.png 1080w, images/buvaaz_logo_02-p-1600.png 1600w, images/buvaaz_logo_02.png 1977w"
               sizes="123.994140625px"
             />
           </div>
