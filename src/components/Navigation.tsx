@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Navigation() {
+  const sessionId = localStorage.getItem("sessionId");
+  const navigate = useNavigate();
   return (
     <div
       data-w-id="2103393a-d7dc-135f-4223-f2e9130baa83"
@@ -38,9 +42,17 @@ export default function Navigation() {
               >
                 <div>Log in</div>
               </a>
-              <a href="#" className="uui-button w-inline-block">
-                <div className="secotext">My account</div>
-              </a>
+              {sessionId != null ? (
+                <a href="#" className="uui-button w-inline-block">
+                  <div className="secotext">My account</div>
+                </a>
+              ) : (
+                <a 
+                onClick={()=>navigate("/get_started")}
+                href="#" className="uui-button w-inline-block">
+                  <div className="secotext">Get Started</div>
+                </a>
+              )}
             </div>
           </div>
         </nav>

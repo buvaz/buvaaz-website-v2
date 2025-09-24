@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
 import Navigation from "@/components/Navigation";
 import BuvaazSlider from "@/components/Slider";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div>
       <Navigation />
@@ -61,7 +63,8 @@ export default function Home() {
           </div>
           <div className="div-block-20">
             <a
-              href="https://play.google.com/store/apps/details?id=com.buvaaz.mobile&amp;hl=en"
+              onClick={() => navigate("/business_or_creator")}
+              style={{ cursor: "pointer" }}
               className="primacta w-inline-block"
             >
               <div className="primatext">Start earning — with buvaaz</div>
@@ -198,7 +201,8 @@ export default function Home() {
                   </div>
                 </div>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.buvaaz.mobile&amp;hl=en"
+                  href="#"
+                  onClick={() => navigate("/chooseplan?accountType=creator")}
                   className="primacta w-inline-block"
                 >
                   <div className="primatext">Join as — a Creator</div>
@@ -248,7 +252,8 @@ export default function Home() {
                   </div>
                 </div>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.buvaaz.mobile&amp;hl=en"
+                  href="#"
+                  onClick={() => navigate("/chooseplan?accountType=business")}
                   className="primacta black w-inline-block"
                 >
                   <div className="primatext green">Join as — a Business</div>
@@ -259,11 +264,7 @@ export default function Home() {
         </div>
       </div>
       <div className="div-section-padding-top-business">
-        <img
-          src="/images/Avatar-Image-1.png"
-          loading="lazy"
-          alt=""
-        />
+        <img src="/images/Avatar-Image-1.png" loading="lazy" alt="" />
         <div className="div-container _16-margin">
           <div className="div-flex-3">
             <div className="text-61-copy business-text-color">
@@ -1060,7 +1061,7 @@ export default function Home() {
         </div>
         <div className="div-block-20">
           <a
-            href="https://play.google.com/store/apps/details?id=com.buvaaz.mobile&amp;hl=en"
+            onClick={() => navigate("/business_or_creator")}
             className="primacta w-inline-block"
           >
             <div className="primatext">Start earning — with buvaaz</div>
@@ -1069,7 +1070,7 @@ export default function Home() {
         <FAQ />
       </div>
       <Footer />
-      <Loader/>
+      <Loader />
     </div>
   );
 }
